@@ -1,0 +1,41 @@
+Scanner scan = new Scanner(System.in);
+System.out.println("请选择功能：1.存款 2.取款 3.转账 4.退出");
+int command = scan.nextInt();
+
+//方法一
+switch (command){
+    case 1:
+        System.out.println("存款");
+        break;
+    case 2:
+        System.out.println("取款");
+        break;
+    case 3:
+        System.out.println("转账");
+        break;
+    case 4:
+        System.out.println("退出");
+        break;
+    default:
+        System.out.println("输出错误！");
+}
+
+//方法二
+while (true){
+    if(command == 1){
+        System.out.println("存款");
+        break;
+    }else if(command == 2){
+        System.out.println("取款");
+        break;
+    }else if (command == 3){
+        System.out.println("转账");
+        break;
+    }else if (command == 4){
+        System.out.println("退出");
+        break;
+    }else {
+        System.out.println("输入错误");
+        break;
+    }
+}
