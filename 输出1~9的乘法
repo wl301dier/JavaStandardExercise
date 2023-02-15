@@ -1,0 +1,9 @@
+int count = 0;
+Scanner scan = new Scanner(System.in);
+System.out.println("输入因数：");
+int num = scan.nextInt();
+while (num<=9){
+    count=num*9;
+    System.out.println(num+"*9="+count);
+    num++;
+}
