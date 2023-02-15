@@ -1,0 +1,11 @@
+int num = 250;
+
+Scanner scan = new Scanner(System.in);
+System.out.println("猜吧！");
+int guess = scan.nextInt();
+
+while (guess != num){
+    System.out.println("猜错了！请重新猜!");
+    guess = scan.nextInt();
+}
+System.out.println("恭喜你，猜对了！");
