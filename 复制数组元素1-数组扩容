@@ -1,9 +1,18 @@
+//声明数组arr并初始化空间为10
 int[] arr = new int[10];
+//循环遍历随机生成的10个数
 for(int i=0;i<arr.length;i++){
+    /*Math.random()随机生成的数范围是0.0到0.999的循环，
+        *100范围是0到99，(int)(Math.random()*100)是将double数据类型，
+        强制转换为int类型。
+    */
+    //将随机生成的数赋值给数组arr[i]
     arr[i] = (int)(Math.random()*100);
+    //打印输出数组arr
     System.out.println(arr[i]);
 }
 
+//声明变量max并初始化，将arr数组的第一个元素赋值给变量max。
 int max = arr[0]; //假设第1个元素为最大值
 for(int i=1;i<arr.length;i++){ //遍历剩余元素
     if(arr[i]>max){   //若剩余元素大于max
@@ -14,6 +23,7 @@ System.out.println("最大值为:"+max);
 arr = Arrays.copyOf(arr,arr.length+1);//数组扩容
 arr[arr.length-1] = max;//将max赋值给arr的最后一个元素
 
+//循环遍历arr数组并打印输出
 for (int i = 0; i < arr.length; i++){
     System.out.println(arr[i]);
 }
