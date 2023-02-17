@@ -1,36 +1,43 @@
+//while循环遍历
 while (true) {
+    //获取输入内容。
     Scanner scan = new Scanner(System.in);
+    //提示用户输入内容。
     System.out.println("请输入成绩：");
+    声明数据类型为double的变量score，并将扫描到的数据赋值给score。
     double score = scan.nextDouble();
-    System.out.println("请输入出勤率：");
+    //提示用户输入出勤分数。
+    System.out.println("请输入出勤：");
+    //声明数据类型为double的变量attendance，并将扫描到的数据赋值给attendance。
     double attendance = scan.nextDouble();
 
-    if (score < 0 || score > 100) {
+    if (score < 0 || score > 100) {//条件判断分数是否合法。条件为真，合法；否则，不合法。
         System.out.println("成绩不合法");
-    } else if (score <= 100 && score >= 90) {
+    } else if (score <= 100 && score >= 90) {判断成绩是否在90到100之间，若在，成绩优秀。
         System.out.println("成绩合法！");
         System.out.println("成绩优秀！");
-        if ((attendance <= 100 && attendance > 80)) {
+        if ((attendance <= 100 && attendance > 80)) {//判断出勤分数是否在80到100之间，不包括80。若在，则成绩优秀，出勤合格，准予毕业；否则，不满足毕业条件。
             System.out.println("出勤率合格，准予毕业！");
-        } else {
+        } else {//成绩优秀，但出勤不合格，不允毕业。
             System.out.println("出勤率不合格，不准毕业！");
         }
-    } else if (score < 90 && score >= 70) {
+    } else if (score < 90 && score >= 70) {//判断成绩是否在70到90之间，若在，则成绩良好。
         System.out.println("成绩良好！");
-        if ((attendance <= 100 && attendance > 80)) {
+        if ((attendance <= 100 && attendance > 80)) {//判断出勤分数是否在80到100之间，不包括80。若在，则成绩良好，出勤合格，准予毕业；否则，不满足毕业条件。
             System.out.println("出勤率合格，准予毕业！");
-        } else {
+        } else {//成绩良好，但出勤不合格，不允毕业。
             System.out.println("出勤率不合格，不准毕业！");
         }
-    } else if (score < 70 && score >= 60) {
+    } else if (score < 70 && score >= 60) {//判断成绩是否在60到70之间，若在，则成绩合格。
         System.out.println("成绩及格！");
-        if ((attendance <= 100 && attendance > 80)) {
+        if ((attendance <= 100 && attendance > 80)) {//判断出勤分数是否在80到100之间，不包括80。若在，则成绩合格，出勤合格，准予毕业；否则，不满足毕业条件。
             System.out.println("出勤率合格，准予毕业！");
-        } else {
+        } else {//成绩合格，但出勤不合格，不允毕业。
             System.out.println("出勤率不合格，不准毕业！");
         }
-    } else if (score < 60) {
+    } else if (score < 60) {//判断成绩是否低于60，若条件为真，不允毕业。
         System.out.println("成绩不及格！" + "\n" + "不准毕业！");
+        //跳出循环，否则进入死循环
         break;
     }
  }
