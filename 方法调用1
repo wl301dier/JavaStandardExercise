@@ -1,0 +1,9 @@
+public static void main(String[] args) {
+    Num();
+}
+
+public static void Num(){
+    Scanner scan = new Scanner(System.in);
+    System.out.println("请输入：");
+    System.out.println(scan.next());
+}
