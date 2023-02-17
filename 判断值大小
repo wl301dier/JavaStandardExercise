@@ -1,8 +1,13 @@
+        //声明变量a并初始化
         int a = 5;
+        //声明变量b并初始化
         int b = 8;
+        //声明变量c并将三目条件运算的结果赋值给c
         int c = a>b?a:b;
+        //打印输出c
         System.out.println(c);
-
+        
+        //if循环判断a,b值得大小。若a>b,输出b的值；否则输出a的值
         if(a>b){
             System.out.println(b);
         }
