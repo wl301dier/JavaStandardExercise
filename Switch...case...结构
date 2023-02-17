@@ -1,17 +1,21 @@
+//获取输入内容
 Scanner scan = new Scanner(System.in);
+//打印输出
 System.out.println("请选择功能: 1.存款 2.取款 3.退卡");
+//扫描用户输入的内容
 int command = scan.nextInt();
 
+//选择功能
 switch(command){
     case 1:
         System.out.println("存款业务处理...");
-        break;
+        break;//执行到此，退出循环。
     case 2:
         System.out.println("取款业务处理...");
         break;
     case 3:
         System.out.println("退卡");
         break;
-    default:
+    default://没有满足的条件，执行此句
         System.out.println("输入错误");
 }
