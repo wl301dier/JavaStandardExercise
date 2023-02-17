@@ -1,26 +1,33 @@
+//获取用户输入的数据。
 Scanner scan = new Scanner(System.in);
+//提示用户输入数据。
 System.out.println("请选择功能：1.存款 2.取款 3.转账 4.退出");
+//声明变量command，并将扫描到的数据赋值给command。
 int command = scan.nextInt();
 
 //方法一
-switch (command){
+switch (command){//判断用户输入的条件，满足哪个，就执行哪个
     case 1:
         System.out.println("存款");
+        //跳出循环，否则进入死循环。
         break;
     case 2:
         System.out.println("取款");
+        //跳出循环，否则进入死循环。
         break;
     case 3:
         System.out.println("转账");
+        //跳出循环，否则进入死循环。
         break;
     case 4:
         System.out.println("退出");
+        //跳出循环，否则进入死循环。
         break;
-    default:
+    default://没有满足条件，则执行此句，提示用户输入有误。
         System.out.println("输出错误！");
 }
 
-//方法二
+//方法二注释含义同理
 while (true){
     if(command == 1){
         System.out.println("存款");
